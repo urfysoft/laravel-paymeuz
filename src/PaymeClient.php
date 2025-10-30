@@ -59,8 +59,6 @@ class PaymeClient
             'params' => $params,
         ];
 
-        $authHeader = 'X-Auth: '.$this->merchantId.':'.$this->secretKey;
-
         if ($this->loggingEnabled) {
             $this->log('info', 'Payme Request', [
                 'method' => $method,
@@ -68,10 +66,22 @@ class PaymeClient
             ]);
         }
 
+        $authKey = $this->merchantId.':'.$this->secretKey;
+
+        if (
+            in_array($method, [
+                'cards.create',
+                'cards.get_verify_code',
+                'cards.verify',
+            ])
+        ) {
+            $authKey = $this->merchantId;
+        }
+
         try {
             $response = $this->httpClient->post($this->baseUrl, [
                 'headers' => [
-                    'X-Auth' => $authHeader,
+                    'X-Auth' => $authKey,
                     'Content-Type' => 'application/json',
                     'Cache-Control' => 'no-cache',
                 ],
