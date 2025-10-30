@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('urfysoft_payme_cards', function (Blueprint $table) {
             $table->uuid()->default(new Uuid7)->primary();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignUuid('user_id')->constrained()->onDelete('cascade');
             $table->text('token');
             $table->string('card_number', 16);
             $table->string('expire', 4);

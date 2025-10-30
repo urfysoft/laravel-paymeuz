@@ -37,13 +37,13 @@ composer require urfysoft/laravel-paymeuz
 ### 2. Опубликуйте конфигурацию:
 
 ```bash
-php artisan vendor:publish --tag=payme-config
+php artisan vendor:publish --tag=paymeuz-config
 ```
 
 ### 3. Опубликуйте и запустите миграции:
 
 ```bash
-php artisan vendor:publish --tag=payme-migrations
+php artisan vendor:publish --tag=paymeuz-migrations
 php artisan migrate
 ```
 
