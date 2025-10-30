@@ -4,7 +4,6 @@ namespace Urfysoft\Payme;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Urfysoft\Payme\Commands\PaymeCommand;
 
 class PaymeServiceProvider extends PackageServiceProvider
 {
@@ -18,8 +17,6 @@ class PaymeServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-paymeuz')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_paymeuz_table')
-            ->hasCommand(PaymeCommand::class);
+            ->discoversMigrations();
     }
 }

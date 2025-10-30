@@ -1,10 +1,17 @@
 {
     "name": "urfysoft/laravel-paymeuz",
-    "description": "This is my package laravel-paymeuz",
+    "description": "Paycom (Payme) Subscribe API SDK for Laravel",
     "keywords": [
         "urfysoft",
         "laravel",
-        "laravel-paymeuz"
+        "laravel-paymeuz",
+        "payme",
+        "payme.uz",
+        "paymeuz",
+        "paycom",
+        "paycom.uz",
+        "paycomuz",
+        "laravel-paycom"
     ],
     "homepage": "https://github.com/urfysoft/laravel-paymeuz",
     "license": "MIT",
@@ -17,8 +24,10 @@
     ],
     "require": {
         "php": "^8.4",
+        "illuminate/contracts": "^11.0||^12.0",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^11.0||^12.0"
+        "tpetry/laravel-postgresql-enhanced": "^3.4",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "laravel/pint": "^1.14",

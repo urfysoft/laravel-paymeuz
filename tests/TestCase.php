@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Urfysoft\\Payme\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Urfysoft\\PaymeSdk\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
