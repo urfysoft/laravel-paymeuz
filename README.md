@@ -1,4 +1,4 @@
-# Payme Subscribe API SDK для Laravel
+# Paycom (Payme) Subscribe API SDK for Laravel
 
 [![PHP Version](https://img.shields.io/badge/php-%5E8.4-blue)](https://www.php.net/)
 [![Laravel Version](https://img.shields.io/badge/laravel-%5E12.0-red)](https://laravel.com/)
